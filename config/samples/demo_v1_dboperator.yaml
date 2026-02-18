@@ -1,0 +1,18 @@
+apiVersion: demo.db.com/v1
+kind: Dboperator
+metadata:
+  labels:
+    app.kubernetes.io/name: dboperator
+    app.kubernetes.io/instance: dboperator-sample
+    app.kubernetes.io/part-of: db-operator
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: db-operator
+  name: dboperator-sample
+spec:
+  # TODO(user): Add fields here
+  dbtype: "redis"
+  username: "admin"
+  password: "securepassword123"
+  dbname: "newdb5"
+  version: "latest"
+  storage: "1Gi"

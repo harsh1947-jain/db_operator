@@ -1,0 +1,27 @@
+# permissions for end users to view dboperators.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: dboperator-viewer-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: db-operator
+    app.kubernetes.io/part-of: db-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: dboperator-viewer-role
+rules:
+- apiGroups:
+  - demo.db.com
+  resources:
+  - dboperators
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - demo.db.com
+  resources:
+  - dboperators/status
+  verbs:
+  - get
