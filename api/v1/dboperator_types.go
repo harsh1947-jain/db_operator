@@ -34,8 +34,11 @@ type DboperatorSpec struct {
 	Username string `json:"username"`
 	Password string `json:"password"`
 	DbName   string `json:"dbname,omitempty"`
-	Storage  string `json:"storage,omitempty"`
-	Version  string `json:"version,omitempty"`
+
+	// +kubebuilder:validation:Enum=small;medium;big
+	// +kubebuilder:default:=small
+	Size    string `json:"size,omitempty"`
+	Version string `json:"version,omitempty"`
 }
 
 // DboperatorStatus defines the observed state of Dboperator
