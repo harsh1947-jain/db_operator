@@ -44,7 +44,7 @@ The operator creates a StatefulSet with the correct container image, volume moun
 | `username` | Yes      | Database username                                | `"admin"`      |
 | `password` | Yes      | Database password                                | `"secret"`     |
 | `dbname`   | No       | Database name                                    | `"myapp"`      |
-| `storage`  | No       | Persistent volume size                           | `"1Gi"`        |
+| `size`     | No       | Small/medium/big                                  | `"small"`        |
 | `version`  | No       | Database image tag                               | `"15"`         |
 
 ### Status Fields
