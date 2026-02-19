@@ -45,7 +45,12 @@ spec:
                 type: string
               password:
                 type: string
-              storage:
+              size:
+                default: small
+                enum:
+                - small
+                - medium
+                - big
                 type: string
               username:
                 type: string

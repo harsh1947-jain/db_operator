@@ -13,6 +13,6 @@ spec:
   dbtype: "redis"
   username: "admin"
   password: "securepassword123"
-  dbname: "newdb5"
+  dbname: "newdb12"
   version: "latest"
-  storage: "1Gi"
+  size: "small"
